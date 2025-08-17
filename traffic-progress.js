@@ -262,10 +262,11 @@ const trafficRenderer = (() => {
               ${defaultTimeInfoHTML}
             </div>
           </div>
-          <div class="relative h-1.5">
-            <div class="absolute inset-0 bg-neutral-200 dark:bg-neutral-700 rounded-full"></div>
-            <div class="absolute inset-0 bg-emerald-500 rounded-full transition-all duration-300 progress-bar" style="width: ${percentage}%; max-width: 100%; background-color: ${progressColor};"></div>
-          </div>
+          // 将进度条容器部分修改为：
+<div class="relative h-1.5">
+  <div class="absolute inset-0 bg-neutral-200 dark:bg-neutral-700 rounded-full border border-neutral-300 dark:border-neutral-600"></div>
+  <div class="absolute inset-0 bg-emerald-500 rounded-full transition-all duration-300 progress-bar" style="width: ${percentage}%; max-width: 100%; background-color: ${progressColor};"></div>
+</div>
         `;
 
         oldSection.after(newElement);
