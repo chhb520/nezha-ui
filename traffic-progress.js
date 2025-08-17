@@ -1,4 +1,4 @@
-const SCRIPT_VERSION = 'v20250818';
+const SCRIPT_VERSION = 'v20250617';
 
 // == 样式注入模块 ==
 function injectCustomCSS() {
