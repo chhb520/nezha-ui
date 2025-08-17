@@ -265,7 +265,7 @@ const trafficRenderer = (() => {
           // 将进度条容器部分修改为：
 // 将进度条容器部分修改为：
 <div class="relative h-1.5">
-  <div class="absolute inset-0 rounded-full" style="background: linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 50%, #e5e7eb 100%);"></div>
+  <div class="absolute inset-0 bg-gray-300 dark:bg-gray-600 rounded-full" style="box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);"></div>
   <div class="absolute inset-0 bg-emerald-500 rounded-full transition-all duration-300 progress-bar" style="width: ${percentage}%; max-width: 100%; background-color: ${progressColor};"></div>
 </div>
         `;
