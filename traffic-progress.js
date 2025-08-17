@@ -197,12 +197,19 @@ ${defaultTimeInfoHTML}
 </div>
 </div>
 <div class="relative h-1.5">
-  <!-- 剩余流量底色：淡蓝色半透明 -->
-  <div class="absolute inset-0 rounded-full" style="background-color: rgba(59, 130, 246, 0.3);"></div>
+  <!-- 剩余流量底色：深色背景条 -->
+  <div class="absolute inset-0 rounded-full" 
+       style="background-color: rgba(30, 41, 59, 0.6);"></div>
   <!-- 已用流量条：彩色渐变 -->
-  <div class="absolute inset-0 rounded-full transition-all duration-300 progress-bar" 
-       style="width: ${percentage}%; max-width: 100%; background-color: ${progressColor};"></div>
+  <div class="absolute inset-0 rounded-full transition-all duration-300 progress-bar"
+       style="
+         width: ${percentage}%; 
+         max-width: 100%; 
+         background: linear-gradient(90deg, ${progressColor}, ${progressColor} 90%, #1e293b);
+       ">
+  </div>
 </div>
+
 `;
 oldSection.after(newElement);
 log(`插入新流量条目: ${serverName}`);
