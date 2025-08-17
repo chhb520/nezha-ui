@@ -263,7 +263,7 @@ const trafficRenderer = (() => {
             </div>
           </div>
           <div class="relative h-1.5">
-            <div class="absolute inset-0 bg-neutral-200 dark:bg-neutral-700 rounded-full"></div>
+            <div class="absolute inset-0 bg-neutral-50 dark:bg-neutral-850 rounded-full"></div>
             <div class="absolute inset-0 bg-emerald-500 rounded-full transition-all duration-300 progress-bar" style="width: ${percentage}%; max-width: 100%; background-color: ${progressColor};"></div>
           </div>
         `;
