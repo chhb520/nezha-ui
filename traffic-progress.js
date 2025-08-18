@@ -6,12 +6,18 @@ function injectCustomCSS() {
   style.textContent = `
 /* 隐藏父级类名为 mt-4 w-full mx-auto 下的所有 div */
 .mt-4.w-full.mx-auto > div {
-  display: none;
+  display: none !important;
 }
 `;
   document.head.appendChild(style);
 }
-injectCustomCSS();
+
+// 确保在 DOM 加载完成后执行
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', injectCustomCSS);
+} else {
+  injectCustomCSS();
+}
 
 // == 工具函数模块 ==
 const utils = (() => {
@@ -219,22 +225,22 @@ const trafficRenderer = (() => {
 <div class="relative h-1.5">
   <!-- 最底层更暗灰色底条 -->
   <div class="absolute inset-0 rounded-full" 
-       style="background-color: rgba(30, 41, 59, 0.8);"></div>
+       style="background-color: rgba(30, 41, 59, 0.8) !important;"></div>
 
   <!-- 浅色模式灰色背景条 -->
   <div class="absolute inset-0 rounded-full dark:hidden" 
-       style="background-color: #d1d5db;"></div>
+       style="background-color: #d1d5db !important;"></div>
 
   <!-- 深色模式灰色背景条 -->
   <div class="absolute inset-0 rounded-full hidden dark:block" 
-       style="background-color: #374151;"></div>
+       style="background-color: #374151 !important;"></div>
 
   <!-- 已用流量条：彩色渐变 -->
   <div class="absolute inset-0 rounded-full transition-all duration-300 progress-bar"
        style="
          width: ${percentage}%; 
          max-width: 100%; 
-         background: linear-gradient(90deg, ${progressColor}, ${progressColor} 90%, #1e293b);
+         background: linear-gradient(90deg, ${progressColor}, ${progressColor} 90%, #1e293b) !important;
        ">
   </div>
 </div>
