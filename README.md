@@ -30,11 +30,11 @@
     enableLog: false           // 开启日志
   };
 </script>
-<script src="https://cdn.jsdelivr.net/gh/ziwiwiz/nezha-ui@main/traffic-progress.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/chhb520/nezha-ui@main/traffic-progress.js"></script>
 ```
 
 ###### 哪吒详情页直接展示网络波动卡片 
 ```html
 /* 源自https://www.nodeseek.com/post-349102-1 */
-<script src="https://cdn.jsdelivr.net/gh/ziwiwiz/nezha-ui@main/netstatus-autoshow.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/chhb520/nezha-ui@main/netstatus-autoshow.js"></script>
 ```
