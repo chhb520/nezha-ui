@@ -6,7 +6,7 @@ function injectCustomCSS() {
   style.textContent = `
     /* 隐藏父级类名为 mt-4 w-full mx-auto 下的所有 div */
     .mt-4.w-full.mx-auto > div {
-      display: block !important;
+      display: none;
     }
   `;
   document.head.appendChild(style);
